@@ -1,0 +1,226 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+html {
+  box-sizing: border-box;
+  font-family: "Arial";
+}
+
+.wrapper {
+  max-width: 1920px;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.products__title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.products__cards {
+  display: flex;
+  gap: 20px;
+}
+
+.products__card {
+  width: 380px;
+  flex-shrink: 1;
+  border-radius: 12px;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card__description {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__img {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2f2f2f;
+}
+
+.card__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2f2f2f;
+  margin-bottom: 24px;
+  flex: 1 1 auto;
+}
+
+.btn {
+  max-width: 332px;
+  height: 48px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  text-transform: uppercase;
+}
+
+.card__btn {
+  border: 2px solid #42940f;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: #42940f;
+  transition: all 0.3s ease 0s;
+}
+
+.card__btn:hover {
+  background: #42940f;
+  color: #fff;
+}
+
+.card__btn:active {
+  background: #1f5200;
+  border: 2px solid #1f5200;
+  color: #fff;
+}
+
+button:disabled {
+  background: #4e4e4e;
+  border: 1px solid #4e4e4e;
+  color: #fff;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.card__label-new,
+.card__label-last {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f2f2f;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 16px;
+}
+
+.card__label-new {
+  background: #fdcff3;
+  border-radius: 8px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.card__label-last {
+  background: #ffcf56;
+  border-radius: 8px;
+  position: absolute;
+  top: 16px;
+  left: 142px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 920px;
+  }
+
+  .card__label-new,
+  .card__label-last {
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .card__label-last {
+    left: 132px;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    max-width: 820px;
+  }
+
+  .products__title {
+    font-size: 36px;
+  }
+
+  .products__cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .products__card {
+    width: 360px;
+    margin-bottom: 40px;
+  }
+
+  .card__label-new,
+  .card__label-last {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  .card__label-last {
+    left: 142px;
+  }
+}
+
+@media (max-width: 806px) {
+  .container {
+    max-width: 766px;
+  }
+
+  .products__card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container {
+    max-width: 670px;
+  }
+
+  .products__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products__card {
+    width: 320px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    max-width: 340px;
+  }
+
+  .products__title {
+    font-size: 36px;
+  }
+
+  .products__card {
+    width: 300px;
+  }
+}
